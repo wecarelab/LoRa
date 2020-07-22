@@ -22,7 +22,8 @@ The following image shows the information flow of the different elements in a Lo
 
 ![LoRa_comunication](/images/LoRa_communication.svg)
 
-![NetworkTopologies](/images/NetworkTopologies.svg) Other networks use a mesh network architecture. In a mesh, individual end nodes send information from other nodes to increase the communication range and size of the network. While this increases distance, it also adds complexity, reduces network capacity, and reduces battery life, since the nodes receive and send information from other nodes that is probably irrelevant to them. Star architecture makes the most sense for preserving battery life when long-range connectivity can be achieved.
+<img align="right" width=175 src="/images/NetworkTopologies.svg" />
+ Other networks use a mesh network architecture. In a mesh, individual end nodes send information from other nodes to increase the communication range and size of the network. While this increases distance, it also adds complexity, reduces network capacity, and reduces battery life, since the nodes receive and send information from other nodes that is probably irrelevant to them. Star architecture makes the most sense for preserving battery life when long-range connectivity can be achieved.
 
 
 In a LoRaWAN network the nodes are not associated with a specific Gateway. Instead, data transmitted by one node can be received by multiple gateways. Each Gateway will send the received packet from the end node to the network cloud/server. The complexity is transferred to the network server, which manages the network and will filter out redundant packets received, perform security checks, etc. If a node is mobile or is moving there is no need to manage the transition from one Gateway to another as the server will take care of discarding duplicates and managing the information. In the following image you can see the architecture of LoRaWAN.
