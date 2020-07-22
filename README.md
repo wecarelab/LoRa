@@ -1,4 +1,4 @@
-<div align="center">
+<div align="justify">
 
 # Basic concepts
 LoRa is a wireless technology just like WiFi or Bluetooth and the most important features compared to other technologies are:
