@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" media="all" href="/res/css/markdown_style.css" />
+<div align="center">
 
 # Basic concepts
 LoRa is a wireless technology just like WiFi or Bluetooth and the most important features compared to other technologies are:
@@ -68,7 +68,7 @@ In our case the MQTT server will act as a cloud server, where the nodes will pub
 
 # Hardware we need
 
-
+</div>
 
 
 
