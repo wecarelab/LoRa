@@ -1,4 +1,4 @@
-<div style='text-align: justify;'>
+<link rel="stylesheet" type="text/css" media="all" href="/res/css/style.css" />
 
 # Basic concepts
 LoRa is a wireless technology just like WiFi or Bluetooth and the most important features compared to other technologies are:
@@ -20,13 +20,13 @@ In addition to the features inherited from LoRa , LoRaWAN adds some more:
 
 The following image shows the information flow of the different elements in a LoRaWAN implementation. In this scheme you can see that the nodes can communicate with the final server fully encrypted. The Gateway simply acts as an intermediary between the different nodes and the server manages the information of the nodes.
 
-![LoRa_comunication](/images/LoRa_communication.svg)
+![LoRa_comunication](/res/images/LoRa_communication.svg)
 
-<img align="right" width=250 src="/images/NetworkTopologies.svg" /> Other networks use a mesh network architecture. In a mesh, individual end nodes send information from other nodes to increase the communication range and size of the network. While this increases distance, it also adds complexity, reduces network capacity, and reduces battery life, since the nodes receive and send information from other nodes that is probably irrelevant to them. Star architecture makes the most sense for preserving battery life when long-range connectivity can be achieved.
+<img align="right" width=250 src="/res/images/NetworkTopologies.svg" /> Other networks use a mesh network architecture. In a mesh, individual end nodes send information from other nodes to increase the communication range and size of the network. While this increases distance, it also adds complexity, reduces network capacity, and reduces battery life, since the nodes receive and send information from other nodes that is probably irrelevant to them. Star architecture makes the most sense for preserving battery life when long-range connectivity can be achieved.
 
 In a LoRaWAN network the nodes are not associated with a specific Gateway. Instead, data transmitted by one node can be received by multiple gateways. Each Gateway will send the received packet from the end node to the network cloud/server. The complexity is transferred to the network server, which manages the network and will filter out redundant packets received, perform security checks, etc. If a node is mobile or is moving there is no need to manage the transition from one Gateway to another as the server will take care of discarding duplicates and managing the information. In the following image you can see the architecture of LoRaWAN.
 
-![LoRa_network_architecture](/images/LoRa_network_architecture.png)
+![LoRa_network_architecture](/res/images/LoRa_network_architecture.png)
 
 A very important aspect when using LoRa is the regulations that limit its use. In the case of the European Union this is established according to the frequency used:
 - (863.0 - 868.0 MHz): 1%
@@ -69,7 +69,6 @@ In our case the MQTT server will act as a cloud server, where the nodes will pub
 # Hardware we need
 
 
-</div>
 
 
 
