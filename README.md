@@ -15,6 +15,8 @@ In addition to the features inherited from LoRa , LoRaWAN adds some more:
 - Secure two-way connections.
 - Interoperability of the various LoRaWAN networks worldwide (optional).
 - More than 50.000 modes can be connected in a single network.
-![test](/images/LoRa_communication.svg)
+See figure \ref{mylabel}.
+
+![test\label{mylabel}](/images/LoRa_communication.svg)
 ![test2](/images/LoRa_network_architecture.png)
 # Hardware we need
