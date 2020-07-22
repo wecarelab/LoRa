@@ -1,11 +1,11 @@
 # Basic concepts
 LoRa is a wireless technology just like WiFi or Bluetooth and the most important features compared to other technologies are:
--Interference tolerance.
--Low consumption.
--Long range, in ideal conditions more than 20 km.
--Low data transfer, until 255 bytes.
--Working frequencies: 868MHz in EU, 915MHz in USA and 433MHz in Asia
--It uses a type of modulation patented by Semtech called Chirp Spread Spectrum or CSS.
+- Interference tolerance.
+- Low consumption.
+- Long range, in ideal conditions more than 20 km.
+- Low data transfer, until 255 bytes.
+- Working frequencies: 868MHz in EU, 915MHz in USA and 433MHz in Asia
+- It uses a type of modulation patented by Semtech called Chirp Spread Spectrum or CSS.
 
 Note that LoRa and LoRaWan are not the same, LoraWAN is a network protocol that uses LoRa technology. LoRaWAN is a type of low power, wide area network (LPWAN). The main components of LoRaWAN are the gateways and the nodes:
 - Gateway: receives and sends information  to the different nodes.
@@ -13,7 +13,8 @@ Note that LoRa and LoRaWan are not the same, LoraWAN is a network protocol that 
 
 In addition to the features inherited from LoRa , LoRaWAN adds some more:
 - Secure two-way connections.
-- Interoperability of the various LoRaWAN networks worldwide (Optional)
+- Interoperability of the various LoRaWAN networks worldwide (optional).
 - More than 50.000 modes can be connected in a single network.
-
+![test](/images/LoRa_communication.svg)
+![test2](/images/LoRa_network_architecture.png)
 # Hardware we need
