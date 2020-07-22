@@ -65,11 +65,16 @@ Depending on the application to be implemented you can use this type of network 
 MQTT( Message Queuing Telemetry Transport) is a M2M (machine-to-machine) communication protocol. The MQTT protocol defines two types of network entities: a broker and multiple clients. A MQTT broker is a server that receives all the messages from the clients and then routes them to the appropriate destination clients. A MQTT client is any device that executes a MQTT library and connects to a MQTT broker through a network. The MQTT protocol is organized based on a hierarchy of topics. Customers can act in two different ways: which send messages to the different topics or who subscribe to the different topics. 
 In our case the MQTT server will act as a cloud server, where the nodes will publish different messages in the MQTT broker and a computer with a MQTT client will receive this data to store it in a file.At the moment no security is implemented since the main objective is to understand the different concepts and implementations of LoRa.
 
-
 # Hardware we need
 
+Although node-by-node connections can be made with LoRa, one of its most important features is that a single device can handle multiple nodes. For this you need a Gateway device, these devices have a very high price compared to the price of each of the nodes. Therefore, for these first experiments, a low cost gateway will be used using the same module as the nodes. This Gateway has many limitations since it can only work with one channel. Since these are the first tests with the LoRa technology it is more than enough since with a single channel you can continue using multiple nodes.
+
+
+
+
+
+
+
+
+
 </div>
-
-
-
-
