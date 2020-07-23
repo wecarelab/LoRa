@@ -75,10 +75,9 @@ Although node-by-node connections can be made with LoRa, one of its most importa
 
 ##Gateway Hardware
 
-<figure>
-<img align="right" width=100 src="/res/images/RFM95W.png" />
-<figcaption>RFM95W</figcaption>
-</figure>
+
+<img align="right" width=100 src="/res/images/RFM95W.png">title</img>
+
 
 {% include image.html url="/res/images/RFM95W.png" description="My cat, Robert Downey Jr." %}
 
