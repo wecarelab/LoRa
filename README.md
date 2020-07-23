@@ -1,6 +1,6 @@
 <div align="justify">
 
-<img align="right" width=330 src=".corporate_resources/Logos/largo_V9_sin_fondo.svg" />
+<img align="right" width=310 src=".corporate_resources/Logos/largo_V9_sin_fondo.svg" />
 
 # WeCareLab LoRa implementation:
 
