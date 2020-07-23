@@ -1,6 +1,6 @@
 <div align="justify">
 
-<img align="right" width=500 src=".corporate_resources/Logos/largo_V9_sin_fondo.svg" />
+<img align="right" width=480 src=".corporate_resources/Logos/largo_V9_sin_fondo.svg" />
 
 # Basic concepts:
 
