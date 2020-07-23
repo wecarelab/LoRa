@@ -2,7 +2,7 @@
 
 <img align="right" width=400 src=".corporate_resources/Logos/largo_V9_sin_fondo.svg" />
 
-# Basic concepts:
+# WeCareLab LoRa implementation:
 
 Before continuing with the implementation explained here it is recommended to first read the [basic concepts](https://github.com/wecarelab/LoRa/wiki/Basic-concepts)  needed to understand this project in the wiki.
 
