@@ -29,7 +29,7 @@ The following image shows the information flow of the different elements in a Lo
 
 In a LoRaWAN network the nodes are not associated with a specific Gateway. Instead, data transmitted by one node can be received by multiple gateways. Each Gateway will send the received packet from the end node to the network cloud/server. The complexity is transferred to the network server, which manages the network and will filter out redundant packets received, perform security checks, etc. If a node is mobile or is moving there is no need to manage the transition from one Gateway to another as the server will take care of discarding duplicates and managing the information. In the following image you can see the architecture of LoRaWAN.
 
-![LoRa_network_architecture](/res/images/LoRa_network_architecture.png "aaaaaaa")
+![LoRa_network_architecture= "aaaaaaa"](/res/images/LoRa_network_architecture.png)
 
 
 A very important aspect when using LoRa is the regulations that limit its use. In the case of the European Union this is established according to the frequency used:
