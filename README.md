@@ -45,20 +45,20 @@ The spreading factor is the duration of the chirp. LoRa operates with propagatio
 
 In the following table you can see an example of the time taken to send 100 bytes with or without ACK in the different spreading factors mentioned above. Since the RFM95W module will be used as the main LoRa module, it has 10 operating modes in its API. Each of these modes configures a different bandwidth and scattering factor to offer a wide range of possibilities to the programmer.
 
-| Modo | BW  | SF | Sensibilidad(dB) | Tiempo de transmisión para un paquete de 100 bytes | Tiempo de transmisión para un paquete de 100 bytes con ACK |
-|:----:|:---:|:--:|:----------------:|:--------------------------------------------------:|:----------------------------------------------------------:|
-| 1    | 125 | 12 | -134             | 4245                                               | 5781                                                       |
-| 2    | 250 | 12 | -131             | 2193                                               | 3287                                                       |
-| 3    | 125 | 10 | -129             | 1208                                               | 2120                                                       |
-| 4    | 500 | 12 | -128             | 1167                                               | 2040                                                       |
-| 5    | 250 | 10 | -126             | 674                                                | 1457                                                       |
-| 6    | 500 | 11 | -125.5           | 715                                                | 1499                                                       |
-| 7    | 250 | 9  | -123             | 428                                                | 1145                                                       |
-| 8    | 500 | 9  | -120             | 284                                                | 970                                                        |
-| 9    | 500 | 8  | -117             | 220                                                | 890                                                        |
-| 10   | 500 | 7  | -114             | 186                                                | 848                                                        |
+| Mode | BW  | SF | Sensibility(dB) | Transmission time for a 100-byte packet | Transmission time for a 100-byte packet with ACK |
+|:----:|:---:|:--:|:----------------:|:--------------------------------------:|:------------------------------------------------:|
+| 1    | 125 | 12 | -134             | 4245                                   | 5781                                             |
+| 2    | 250 | 12 | -131             | 2193                                   | 3287                                             |
+| 3    | 125 | 10 | -129             | 1208                                   | 2120                                             |
+| 4    | 500 | 12 | -128             | 1167                                   | 2040                                             |
+| 5    | 250 | 10 | -126             | 674                                    | 1457                                             |
+| 6    | 500 | 11 | -125.5           | 715                                    | 1499                                             |
+| 7    | 250 | 9  | -123             | 428                                    | 1145                                             |
+| 8    | 500 | 9  | -120             | 284                                    | 970                                              |
+| 9    | 500 | 8  | -117             | 220                                    | 890                                              |
+| 10   | 500 | 7  | -114             | 186                                    | 848                                              |
 
-Although European Union legislation allows 1% of the time, the different servers in LoRaWAN will add their own limitations. In the case of the cloud "TheThingsNetwork" indicates that if you want to use their servers you have to comply with the following limitations, among others: do not exceed 30 seconds of sending per day, separate the messages with several minutes between them and do not exceed 13 bytes per packet.
+Although European Union legislation allows 1% of the time, the different clouds/servers in LoRaWAN will add their own limitations. In the case of the cloud "TheThingsNetwork" indicates that if you want to use their servers you have to comply with the following limitations, among others: do not exceed 30 seconds of sending per day, separate the messages with several minutes between them and do not exceed 13 bytes per packet.For more details on the limitations of TTN see [Fair Access Policy](https://www.google.com).
 
 Depending on the application to be implemented you can use this type of network or create your own. In this case and given that the limitations of the different clouds/servers are excessive to be able to experiment with LoRa, it has been decided to use a local MQTT server. 
 
