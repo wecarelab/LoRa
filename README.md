@@ -80,7 +80,7 @@ Although node-by-node connections can be made with LoRa, one of its most importa
 
 The hardware of the gateway is composed of a Raspberry Pi 2 B(image below), a module RFM95W (right-hand image) and a WIFI USB device for mobility, although the latter is not strictly necessary as the RPI has an RJ45 cable connection.
 
-![LoRa_network_architecture](/res/images/raspberry-pi-2b.png.png)
+![RPI2B](/res/images/raspberry-pi-2b.png)
 
 
 
