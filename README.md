@@ -72,7 +72,10 @@ In our case the MQTT server will act as a cloud server, where the nodes will pub
 
 Although node-by-node connections can be made with LoRa, one of its most important features is that a single device can handle multiple nodes. For this you need a Gateway device, these devices have a very high price compared to the price of each of the nodes. Therefore, for these first experiments, a low cost gateway will be used using the same module as the nodes. This Gateway has many limitations since it can only work with one channel. Since these are the first tests with the LoRa technology it is more than enough, since with a single channel you can continue using multiple nodes.
 
+##Gateway Hardware
 
+<img align="right" width=100 src="/res/images/RFM95W.png" />
+The hardware of the gateway is composed of a Raspberry Pi 2 B, a module RFM95W and a WIFI USB device for mobility, although the latter is not strictly necessary as the RPI has an RJ45 cable connection.
 
 
 
