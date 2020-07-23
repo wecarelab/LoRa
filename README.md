@@ -12,13 +12,15 @@ Although node-by-node connections can be made with LoRa, one of its most importa
 
 ## Gateway Hardware
 
-<img align="right" width=100 src="/res/images/RFM95W.png" />
+<img align="right" width=100 src="./res/images/RFM95W.png" />
 
 The hardware of the gateway is composed of a Raspberry Pi 2 B(image below), a module RFM95W (right-hand image) and a WIFI USB device for mobility, although the latter is not strictly necessary as the RPI has an RJ45 cable connection.
 
-<img align="left" width=300 src="/res/images/raspberry-pi-2b.png" />
+<img align="left" width=300 src="./res/images/raspberry-pi-2b.png" />
 
-**IMPORTANT:** Since no PCBs are used in this first approach to LoRa (to facilitate connections) be sure to **solder the antenna to the RFM95W first**. Many radio modules will stop working ( breaking down ) if they are switched on without the antenna. Therefore before connecting the RPI to the RFM95W make sure you have an antenna connected at all times. The connections between the two devices must be made as follows:
+**IMPORTANT:** Since no PCBs are used in this first approach to LoRa (to facilitate connections) be sure to **solder the antenna to the RFM95W first**. Many radio modules will stop working ( breaking down ) if they are switched on without the antenna. Therefore before connecting the RPI to the RFM95W make sure you have an antenna connected at all times.
+
+The connections between the two devices must be made as follows:
 
 ```
       RPI            Radio module
@@ -30,4 +32,11 @@ CS/CE0 pin 24----------NSS   (CS chip select in)
   MOSI pin 19----------MOSI  (SPI Data in)
   MISO pin 21----------MISO  (SPI Data out)
 ```
+
+In the following picture you can see one of the many possibilities to physically connect the two components. Note that the orientation of the node antennas and the gateway antennas must have the same orientation. Therefore, depending on where the RPI is to be placed, the antenna must be oriented preferably upwards.
+
+<div align="center">
+  <img  width=300 src="./res/images/RPI_RFM95W.jpg" />
+</div>
+
 </div>
