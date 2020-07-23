@@ -1,8 +1,10 @@
 <div align="justify">
 
 
-<img align="right" width=400 src=".corporate_resources/Logos/largo_V9_sin_fondo.svg" />
+
 # Basic concepts:
+
+<img align="right" width=400 src=".corporate_resources/Logos/largo_V9_sin_fondo.svg" />
 LoRa is a wireless technology just like WiFi or Bluetooth and the most important features compared to other technologies are:
 - Interference tolerance.
 - Low consumption.
