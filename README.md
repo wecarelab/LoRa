@@ -39,4 +39,25 @@ In the following picture you can see one of the many possibilities to physically
   <img  width=300 src="./res/images/RPI_RFM95W.jpg" />
 </div>
 
+## Node Hardware
+
+In order to create a LoRa node in these examples, an Arduino Mini will be used together with the RFM95W module. The connections between these two are:
+
+```
+       Arduino      Radio module
+         GND----------GND   (ground in)
+         3V3----------3.3V  (3.3V in)
+  SS pin D10----------NSS   (CS chip select in)
+ SCK pin D13----------SCK   (SPI clock in)
+MOSI pin D11----------MOSI  (SPI Data in)
+MISO pin D12----------MISO  (SPI Data out)
+```
+
+At the moment we will not add any sensor to simplify the examples as much as possible and focus on LoRa communication.
+
+# Software we're gonna need:
+
+This repository is oriented to recompile the maximum information from different sources and make easier the implementation of LoRa. For the gateway software is used the one provided by the non-lucrative organization  [WAZIUP](https://www.waziup.io). In the  [repository](https://github.com/CongducPham/LowCostLoRaGw) of this organization you can find more information about the multitude of options it offers.
+
+
 </div>
