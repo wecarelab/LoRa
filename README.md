@@ -231,4 +231,7 @@ If for example we send only one letter, the "T", we will send 1 byte of informat
 
 This first example is very useful to check the range of our LoRa infrastructure. Since we only send 1 character we can increase the sending frequency and go away with the gateway node to see the range obtained.
 
+From this example we will obtain 2 values that indicate the quality of the transmission. The RSSI, Received Signal Strength Indication, is the received signal power in milliwatts and is measured in dBm. The RSSI is measured in dBm and is a negative value. The closer to 0 the better the signal is. Typical LoRa minimum RSSI values  = -120 dBm. If RSSI=-30dBm signal is strongand  if RSSI=-120dBm signal is weak.
+
+
 </div>

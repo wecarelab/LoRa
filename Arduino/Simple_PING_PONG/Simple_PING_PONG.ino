@@ -26,7 +26,7 @@ void setup()
 {
   int e;
   Serial.begin(38400);  
-
+  pinMode(13, OUTPUT);
   // Print a start message
   PRINT_CSTSTR("%s","Simple LoRa ping-pong with the gateway\n");  
 
@@ -91,9 +91,11 @@ void loop(void)
       PRINTLN;
       
       if (e==3){
+        digitalWrite(13, LOW);
           PRINT_CSTSTR("%s","No Pong from gw!");
           }
       if (e==0) {
+        digitalWrite(13, HIGH);
           PRINT_CSTSTR("%s","Pong received from gateway!");
           PRINTLN;        
           sprintf((char*)message,"SNR at gw=%d   ", sx1272._rcv_snr_in_ack);
