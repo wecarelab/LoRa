@@ -195,7 +195,7 @@ sensor name:Sensor
 source list :8
 ~~~
 
- The node with adrress 8 will create a topic "/test/WeCareLab/Sensor8". The advantage of MQTT is that we can subscribe to multiple sensors using the "#" character. For example with the topic "/test/WeCareLab/#" we will be subscribed to all the Sensors. As we will see later in the Arduino Code you can add another level to the topic's herarchy. Being able to separate multiple data that is sending a node.
+ The node with adrress 8 will create a topic "/test/WeCareLab/Sensor8". The advantage of MQTT is that we can subscribe to multiple sensors using the "#" character. For example with the topic "/test/WeCareLab/#" we will be subscribed to all the Sensors. As we will see later in the Arduino Code you can add another level to the topic's herarchy. Being able to separate multiple data sent by a node.
 
 
 </div>
