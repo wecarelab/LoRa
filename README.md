@@ -174,4 +174,28 @@ sleep 5
 sudo ifup wlan0
 ~~~
 
+Once we have a connection to the network with the RPI we access the administration web of the gateway with "http://[gateway-ip]/admin". The first page that loads is the basic configuration of the gateway.  At this point we can see in the following image if the RPI communicates with the RFM95W module, if the next message after "last rx" is in green it means that there is communication with the module.
+
+![Gateway Admin](\res\images\gateway_admin.png)
+
+It is important to update the software provided by WAZIUP before configuring anything. To do this, go to the "Gateway Update/Full Update" section.
+
+To properly configure the gateway we access the "Gateway configuration/Radio" section. As explained in the basic concepts in the wiki the mode indicated here has to coincide with the one indicated later with the Arduino code. Looking at the table in the wiki the Spreading Factor must also match the chosen mode. The frequency is left as default and we make sure that the PA_BOOST is set to "true".
+
+The next step is to configure the gateway to redirect the information to a MQTT broker. Access the "Clouds/Cloud MQTT" section and enable it by setting it to "true". Since the Raspian image comes with the mosquito package installed, the MQTT broker is already running. You have to indicate the ip of the gateway itself and configure the parameters "project name", "organization" and "sensor name". In "source list" we will indicate which sensors are allowed to use this MQTT Cloud.
+
+![Cloud MQTT](\res\images\Cloud_MQTT.png)
+
+ These will create the topic to which the sensor will send the data. If we configure the MQTT Cloud with the following data (same as in the image above):
+
+~~~
+project name:test
+organization name:WeCareLab
+sensor name:Sensor
+source list :8
+~~~
+
+ The node with adrress 8 will create a topic "/test/WeCareLab/Sensor8". The advantage of MQTT is that we can subscribe to multiple sensors using the "#" character. For example with the topic "/test/WeCareLab/#" we will be subscribed to all the Sensors. As we will see later in the Arduino Code you can add another level to the topic's herarchy. Being able to separate multiple data that is sending a node.
+
+
 </div>
