@@ -176,7 +176,7 @@ sudo ifup wlan0
 
 Once we have a connection to the network with the RPI we access the administration web of the gateway with "http://[gateway-ip]/admin". The first page that loads is the basic configuration of the gateway.  At this point we can see in the following image if the RPI communicates with the RFM95W module, if the next message after "last rx" is in green it means that there is communication with the module.
 
-![Gateway Admin](\res\images\gateway_admin.png)
+![Gateway Admin](./res/images/gateway_admin.png)
 
 It is important to update the software provided by WAZIUP before configuring anything. To do this, go to the "Gateway Update/Full Update" section.
 
@@ -184,7 +184,7 @@ To properly configure the gateway we access the "Gateway configuration/Radio" se
 
 The next step is to configure the gateway to redirect the information to a MQTT broker. Access the "Clouds/Cloud MQTT" section and enable it by setting it to "true". Since the Raspian image comes with the mosquito package installed, the MQTT broker is already running. You have to indicate the ip of the gateway itself and configure the parameters "project name", "organization" and "sensor name". In "source list" we will indicate which sensors are allowed to use this MQTT Cloud.
 
-![Cloud MQTT](\res\images\Cloud_MQTT.png)
+![Cloud MQTT](./res/images/Cloud_MQTT.png)
 
  These will create the topic to which the sensor will send the data. If we configure the MQTT Cloud with the following data (same as in the image above):
 
