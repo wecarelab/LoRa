@@ -74,7 +74,64 @@ In case of using Windows the steps to install the image in the RPI are:
 
 If you use another operating system or prefer another software instead of balenaEtcher you can find more information on the [RaspberryPi installation page](https://www.raspberrypi.org/documentation/installation/installing-images/).
 
+The SD card image defines a pi user:
+
+~~~
+- login: pi
+- password: loragateway
+~~~
+
 This image of the Raspberry Pi has a personalized WIFI management. If a separate USB WIFI is used as in this case it may not work well. The gateway can be used both as an access point and a WIFI client. At the first start of the RPI it will act as an access point so that the gateway can be directly accessed and configured via WEB. To simplify the example in this tutorial it is assumed that you have direct access to the RPI with a monitor, keyboard and mouse. All the necessary configurations will be done in a direct way. In the README of WAZIUP you will find more details to access the gateway, in the section ["Connect to you new gateway"](https://github.com/CongducPham/LowCostLoRaGw#connect-to-your-new-gateway).
+
+Since the first login will be with user pi, the following menu will display:
+
+~~~
+=======================================* Gateway 0000B827EB982031 *===
+0- sudo python start_gw.py                                           +
+1- sudo ./lora_gateway --mode 1                                      +
+2- sudo ./lora_gateway --mode 1 | python post_processing_gw.py       +
+3- ps aux | grep -e start_gw -e lora_gateway -e post_proc -e log_gw  +
+4- tail --line=25 ../Dropbox/LoRa-test/post-processing.log           +
+5- tail --line=25 -f ../Dropbox/LoRa-test/post-processing.log        +
+6- less ../Dropbox/LoRa-test/post-processing.log                     +
+---------------------------------------------------* Connectivity *--+
+f- test: ping 8.8.8.8                                                +
+g- wifi: configure as WiFi client at next reboot                     +
+h- wifi: indicate WiFi SSID and password at next reboot              +
+i- wifi: configure as WiFi access point at next reboot               +
+--------------------------------------------------* Filtering msg *--+
+l- List LoRa reception indications                                   +
+m- List radio module reset indications                               +
+n- List boot indications                                             +
+o- List post-processing status                                       +
+p- List low-level gateway status                                     +
+--------------------------------------------------* Configuration *--+
+A- show gateway_conf.json                                            +
+B- edit gateway_conf.json                                            +
+C- show clouds.json                                                  +
+D- edit clouds.json                                                  +
+----------------------------------------------------------* ngrok *--+
+M- get and install ngrok                                             +
+N- ngrok authtoken                                                   +
+O- ngrok tcp 22                                                      +
+---------------------------------------------------------* Update *--+
+U- update to latest version on repository                            +
+V- download and install a file                                       +
+W- run a command                                                     +
+-----------------------------------------------------------* kill *--+
+K- kill all gateway related processes                                +
+R- reboot gateway                                                    +
+S- shutdown gateway                                                  +
+---------------------------------------------------------------------+
+Q- quit                                                              +
+======================================================================
+Enter your choice:
+
+~~~
+
+To configure the gateway as a wifi client you can try using the "g" option in the menu. Then you have to configure the wifi network with "raspi-config" by accessing the "Network Options/N2 Wi-fi" menu. If it doesn't work you can see the  [manual WIFI configuration]( ./manual-wifi-configuration). To exit this menu and access all the OS options you have to enter Q and enter.
+
+### Manual WIFI configuration:
 
 As we will want to have access to the NET from the gateway we will configure the WIFI to act as a client. The first file to be configured is "/etc/network/interfaces", if we only have one WIFI device the file should look like below:
 
