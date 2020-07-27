@@ -199,4 +199,31 @@ source list :8
 
 Once the gateway has been configured, it must be restarted to ensure that the indicated configuration has been applied. Once the RPI has been restarted we access again to the web interface and we make sure that in the section "Cloud MQTT" a green message appears after the text "last upload time with CloudMQTT.py", indicating that the gateway has communication with the MQTT broker.
 
+## Node Software:
+
+For this part of the tutorial we have modified the [WAZIUP PING PONG](https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino/Arduino_LoRa_Ping_Pong) example simplifying it as much as possible and modifying some aspects.
+
+The most important part to configure/adapt are the following parameters:
+
+~~~
+#define ETSI_EUROPE_REGULATION
+#define PABOOST
+#define MY_FREQUENCY 868.1
+#define BAND868
+#define MAX_DBM 14
+#define LORAMODE  1
+#define node_addr 8
+~~~
+
+If we are in Europe (this is the case) we only have to modify the parameters "MY_FREQUENCY" and "LORAMODE" making it coincide with the configuration of the gateway. Finally give a physical address to the node with the parameter: "node_addr". Remember that in the MQTT Cloud part you have to add this number in "source list".
+
+To send a custom message you can do so with the following instruction:
+
+~~~
+r_size=sprintf((char*)message, "Some information");
+~~~
+
+If for example we send only one letter, the "T", we will send 1 byte of information. If in this text we add for example "temperature/%d" we will create a topic that will be added to this node having as name "temperature". Every MQTT client that is subscribed to the topic "test/WeCareLab/Sensor8/temperature" will receive the number indicated by "%d". In the PING PONG example no data from any sensor is added. Simply send the letter "T" to see if the gateway sends us the ACK confirming the arrival of the data. Keep in mind that the extra information in the topic will also add data to the sent package. It is highly recommended that you use the least number of characters.
+
+
 </div>
