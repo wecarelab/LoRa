@@ -197,5 +197,6 @@ source list :8
 
  The node with adrress 8 will create a topic "/test/WeCareLab/Sensor8". The advantage of MQTT is that we can subscribe to multiple sensors using the "#" character. For example with the topic "/test/WeCareLab/#" we will be subscribed to all the Sensors. As we will see later in the Arduino Code you can add another level to the topic's herarchy. Being able to separate multiple data sent by a node.
 
+Once the gateway has been configured, it must be restarted to ensure that the indicated configuration has been applied. Once the RPI has been restarted we access again to the web interface and we make sure that in the section "Cloud MQTT" a green message appears after the text "last upload time with CloudMQTT.py", indicating that the gateway has communication with the MQTT broker.
 
 </div>
