@@ -44,7 +44,7 @@ In the following picture you can see one of the many possibilities to physically
 In order to create a LoRa node in these examples, an Arduino Mini will be used together with the RFM95W module. The connections between these two are:
 
 ```
-       Arduino      Radio module
+     Arduino Mini  Radio module
          GND----------GND   (ground in)
          3V3----------3.3V  (3.3V in)
   SS pin D10----------NSS   (CS chip select in)
@@ -57,7 +57,21 @@ At the moment we will not add any sensor to simplify the examples as much as pos
 
 # Software we're gonna need:
 
-This repository is oriented to recompile the maximum information from different sources and make easier the implementation of LoRa. For the gateway software is used the one provided by the non-lucrative organization  [WAZIUP](https://www.waziup.io). In the  [repository](https://github.com/CongducPham/LowCostLoRaGw) of this organization you can find more information about the multitude of options it offers.
+This repository is oriented to recompile the maximum information from different sources and make easier the implementation of LoRa. For the gateway software is used the one provided by the non-lucrative organization  [WAZIUP](https://www.waziup.io). In the  [repository](https://github.com/CongducPham/LowCostLoRaGw) of this organization you can find more information about the multitude of options it offers. Although LoRa is designed to consume as little as possible, in this first example we will try to focus on communication. This implies that no energy saving techniques will be implemented in Arduino. Besides simplifying the examples this does not restrict the use of Arduino only as each microcontroller can use a different energy saving strategy.
 
+## Gateway Software:
+
+The Gateway software is based on a WAZIUP modified Raspbian Operating System [image](http://cpham.perso.univ-pau.fr/LORA/WAZIUP/raspberrypi-buster-WAZIUP-demo.iso.zip) that comes with a web configuration interface and a console mode interface.
+
+In case of using Windows the steps to install the image in the RPI are:
+
+* Download the image.
+* Download balenaEtcher software from [balena.io](https://www.balena.io/etcher/).
+* Run balenaEtcher and select te SD card drive.
+* Finally click Burn to write the Raspberry Pi OS image to the SD card.
+
+If you use another operating system or prefer another software instead of balenaEtcher you can find more information on the [RaspberryPi installation page](https://www.raspberrypi.org/documentation/installation/installing-images/).
+
+The requirements are to use a minimum 8GB SD card and a class 10 card is highly recommended. If you use a card larger than 8GB, the partitions can be resized later in the Operating System using the [following instructions](https://www.raspberrypi.org/documentation/configuration/raspi-config.md).
 
 </div>
