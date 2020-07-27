@@ -129,7 +129,7 @@ Enter your choice:
 
 ~~~
 
-To configure the gateway as a wifi client you can try using the "g" option in the menu. Then you have to configure the wifi network with "raspi-config" by accessing the "Network Options/N2 Wi-fi" menu. If it doesn't work you can see the  [manual WIFI configuration]( ./manual-wifi-configuration). To exit this menu and access all the OS options you have to enter Q and enter.
+To configure the gateway as a wifi client you can try using the "g" option in the menu. Then you have to configure the wifi network with "raspi-config" by accessing the "Network Options/N2 Wi-fi" menu. If it doesn't work you can see the  [manual WIFI configuration](#manual-wifi-configuration). To exit this menu and access all the OS options you have to enter Q and enter.
 
 ### Manual WIFI configuration:
 
