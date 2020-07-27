@@ -225,5 +225,6 @@ r_size=sprintf((char*)message, "Some information");
 
 If for example we send only one letter, the "T", we will send 1 byte of information. If in this text we add for example "temperature/%d" we will create a topic that will be added to this node having as name "temperature". Every MQTT client that is subscribed to the topic "test/WeCareLab/Sensor8/temperature" will receive the number indicated by "%d". In the PING PONG example no data from any sensor is added. Simply send the letter "T" to see if the gateway sends us the ACK confirming the arrival of the data. Keep in mind that the extra information in the topic will also add data to the sent package. It is highly recommended that you use the least number of characters.
 
+This first example is very useful to check the scope of our LoRa infrastructure. Since we only send 1 character we can increase the sending frequency and go away with the gateway node to see the range obtained.
 
 </div>
